@@ -1,5 +1,14 @@
 print("Mortgage calculator")
-loan = 300000
-duration_years = 25
-monthly_payment = (loan / duration_years) / 12
-print(f"Monthly payment : {monthly_payment:.2f}€")
+
+def mortgage_calculator(amount, duration_years):
+    monthly_payment = (amount / duration_years) / 12
+    return monthly_payment
+
+loan_amount = int(input("Enter loan amount: "))
+loan_years = int(input("Enter loan duration in years: "))
+
+result = mortgage_calculator(loan_amount, loan_years)
+
+print(f"Monthly payment for this loan is {result:.2f}€")
+
+
